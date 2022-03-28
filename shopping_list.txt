@@ -1,5 +1,5 @@
-milk
-eggs
-cake
-juice
-ice cream
+milk x 3
+eggs x 10
+cake x 1
+juice x 2
+ice cream x 3
