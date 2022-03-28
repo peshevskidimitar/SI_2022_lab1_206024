@@ -1,5 +1,5 @@
 milk x 3
-eggs x 10
+eggs x 12
 cake x 1
 juice x 2
 ice cream x 3
