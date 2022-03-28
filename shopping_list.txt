@@ -1,5 +1,6 @@
 milk x 3
 eggs x 10
 cake x 1
-juice x 2
+bread x 2
 ice cream x 3
+chocolate x 3
