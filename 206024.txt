@@ -1,0 +1,214 @@
+3. После ажурирањето на содржината на README документот со личните податоци направен е commit на master.
+4. git clone https://github.com/peshevskidimitar/SI_2022_lab1_206024.git
+5.
+git add shopping_list.txt
+git commit -m "Add 5 items to the shopping list"
+
+<--- content of shopping_list.txt --->
+milk
+eggs
+cake
+juice
+ice cream
+
+<--- content of shopping_list.txt --->
+6. git commit -a -m "Add quantities to the items"
+<--- content of shopping_list.txt --->
+milk x 3
+eggs x 10
+cake x 1
+juice x 2
+ice cream x 3
+
+<--- content of shopping_list.txt --->
+7.
+git branch branch1
+git branch branch2
+8.
+Cloning into 'SI_2022_lab1_206024'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+[master 8ae6e18] Add 5 items to the shopping list
+ 1 file changed, 5 insertions(+)
+ create mode 100644 shopping_list.txt
+
+[master 07f5bfc] Add quantities to the items
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+9.
+git push origin master
+git push origin branch1
+git push origin branch2
+10. git checkout branch1
+11. git commit -a -m "Change quantity of item #5"
+<--- content of shopping_list.txt --->
+milk x 3
+eggs x 10
+cake x 1
+juice x 2
+ice cream x 5
+
+<--- content of shopping_list.txt --->
+12. git checkout master
+13. git commit -a -m "Change quantity of item #2"
+<--- content of shopping_list.txt --->
+milk x 3
+eggs x 12
+cake x 1
+juice x 2
+ice cream x 3
+
+<--- content of shopping_list.txt --->
+14.
+git push origin master
+git push origin branch1
+git push origin branch2
+15. git checkout branch2
+16. git commit -a -m "Modify item #4"
+<--- content of shopping_list.txt --->
+milk x 3
+eggs x 10
+cake x 1
+bread x 2
+ice cream x 3
+
+<--- content of shopping_list.txt --->
+17.
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 649 bytes | 649.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/peshevskidimitar/SI_2022_lab1_206024.git
+   774d86a..07f5bfc  master -> master
+
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch1' on GitHub by visiting:
+remote:      https://github.com/peshevskidimitar/SI_2022_lab1_206024/pull/new/branch1
+remote:
+To https://github.com/peshevskidimitar/SI_2022_lab1_206024.git
+ * [new branch]      branch1 -> branch1
+
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch2' on GitHub by visiting:
+remote:      https://github.com/peshevskidimitar/SI_2022_lab1_206024/pull/new/branch2
+remote:
+To https://github.com/peshevskidimitar/SI_2022_lab1_206024.git
+ * [new branch]      branch2 -> branch2
+
+Switched to branch 'branch1'
+
+[branch1 0fe41ec] Change quantity of item #5
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+[master a0c0cfa] Change quantity of item #2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 347 bytes | 347.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/peshevskidimitar/SI_2022_lab1_206024.git
+   07f5bfc..a0c0cfa  master -> master
+
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 350 bytes | 350.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/peshevskidimitar/SI_2022_lab1_206024.git
+   07f5bfc..0fe41ec  branch1 -> branch1
+
+Everything up-to-date
+
+Switched to branch 'branch2'
+
+[branch2 83623a8] Modify item #4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+18.
+git reset --soft HEAD^
+git commit -a -m "Modify item #4 and add item #6"
+<--- content of shopping_list.txt --->
+milk x 3
+eggs x 10
+cake x 1
+bread x 2
+ice cream x 3
+chocolate x 3
+<--- content of shopping_list.txt --->
+19.
+[branch2 13f861a] Modify item #4 and add item #6
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+20.
+git checkout master
+
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+git merge branch1
+
+Auto-merging shopping_list.txt
+Merge made by the 'ort' strategy.
+ shopping_list.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+<--- content of shopping_list.txt --->
+milk x 3
+eggs x 12
+cake x 1
+juice x 2
+ice cream x 5
+
+<--- content of shopping_list.txt --->
+
+- Не настанаа конфликти при спојувањењто на branch1 кон master.
+- Спојувањето беше извршено по стратегијата "ort" (Ostensibly Recursive’s Twin), којашто е рекурзивна стратегија.
+21.
+git merge branch2
+
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+<--- content of shopping_list.txt --->
+milk x 3
+eggs x 12
+cake x 1
+<<<<<<< HEAD
+juice x 2
+ice cream x 5
+=======
+bread x 2
+ice cream x 3
+chocolate x 3
+>>>>>>> branch2
+
+<--- content of shopping_list.txt --->
+
+git commit -a -m "Merge branch 'branch2'"
+[master 5919199] Merge branch 'branch2'
+
+<--- content of shopping_list.txt --->
+milk x 3
+eggs x 12
+cake x 1
+bread x 2
+ice cream x 3
+chocolate x 3
+<--- content of shopping_list.txt --->
+
+- Настанаа конфликти при спојувањењто на branch2 кон master.
+- Конфликтите беа разрешени така што беа прифатени промените од branch2.
+- Спојувањето беше извршено по рекурзивна стратегија.
